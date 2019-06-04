@@ -1,0 +1,20 @@
+<h1>Number of words in the entered text: {{counter}}</h1>
+
+<h3>Your text :</h3>
+
+{{fulltext2}}
+
+<br/>
+<br/>
+<a href="{% url 'home' %}">Try Again</a>
+
+
+<h2>Words:</h2>
+
+{% for word, counttotal in wordlog %}
+
+{{ word }} - {{ counttotal }}
+<br/>
+
+
+{% endfor %}
