@@ -1,20 +1,21 @@
-<h1>Number of words in the entered text: {{counter}}</h1>
 
-<h3>Your text :</h3>
 
-{{fulltext2}}
+<h3 style="text-align:center">Number of words in the entered text: {{counter}}</h3>
+
+<h3 style="text-align:center">Your text :</h3>
+
+<p style="text-align:center">{{fulltext2}}</p>
 
 <br/>
 <br/>
-<a href="{% url 'home' %}">Try Again</a>
+<!-- <a href="{% url 'home' %}">Try Again</a> -->
+<p style="text-align:center"><a href="{% url 'home' %}"><button name="button" class="btn btn-lg btn-primary">Try Again</button></a></p>
 
+<h4 style="text-align:center">Words with Decreasing Order of Occurence:</h4>
 
-<h2>Words:</h2>
 
 {% for word, counttotal in wordlog %}
 
-{{ word }} - {{ counttotal }}
-<br/>
-
+<p style="text-align:center">{{ word }} - {{ counttotal }}</p>
 
 {% endfor %}

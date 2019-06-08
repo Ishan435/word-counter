@@ -9,7 +9,8 @@ def homepage(request):
 def countpage(request):
 
     fulltext1= request.GET['fulltext']
-    wordlist= fulltext1.replace('.',' ').replace(',',' ').replace('?',' ').replace('!',' ').replace('-',' ').split()
+    wordlist= fulltext1.replace('.',' ').replace(',',' ').replace('?',' ').replace('!',' ').replace('-',' ').replace('(',' ').replace(')',' ').replace('"',' ').split()
+
 
     worddictionary={}
 
@@ -26,5 +27,3 @@ def countpage(request):
 def aboutpage(request):
 
     return render(request,'about.html')
-
-    
